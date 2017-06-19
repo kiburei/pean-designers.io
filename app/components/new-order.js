@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+    shoppingCart: Ember.inject.service(),
+
     actions: {
         addOrder(product) {
             var params = {
@@ -8,6 +10,7 @@ export default Ember.Component.extend({
                 product_id: product.id,
                 product_cost: product.priceLabel,
             };
+            this.get('shoppingCart').add(product);
             this.sendAction('addOrder1', params);
         }
     }
