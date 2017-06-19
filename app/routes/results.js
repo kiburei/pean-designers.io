@@ -15,7 +15,8 @@ model: function(params) {
   },
   actions: {
     addOrder2(params) {
-      console.log(params);
+      var addOrder = this.store.createRecord('order',params);
+      addOrder.save();
     }
   }
 });
