@@ -1,0 +1,31 @@
+{{#if editProduct}}
+  <h4>Update {{product.owner}}'s {{product.type}}</h4>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        {{input value=product.title id="title" placeholder=product.owner}}
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image URL</label>
+        {{input value=product.image id="image" placeholder=product.image}}
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        {{input value=product.description id="description" placeholder=product.description}}
+      </div>
+
+      <div class="form-group">
+        <label for="cost">Cost</label>
+        {{input value=product.cost id="cost" placeholder=product.cost}}
+      </div>
+
+      <button {{action 'update' product}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'showEditProduct'}}>Update</button>
+{{/if}}
+Contact GitHub API Training Shop Blog About

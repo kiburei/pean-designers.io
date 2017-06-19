@@ -1,0 +1,32 @@
+
+
+{{!-- {{lookup-form nameLookup="nameLookup"}} --}}
+{{#each shoppingCart.items as |item|}}
+	<li>{{item}}</li>
+{{/each}}  
+
+
+
+{{outlet}}
+{{#link-to 'store'}}
+  <h3>Start Shopping</h3>
+{{/link-to}}
+
+
+
+{{!-- ///renders list of products from api--}}
+<ul>
+  {{#each model as |product|}}
+    {{product-tile product=product}}
+  {{/each}}
+</ul>
+
+{{!-- ///renders name look up --}}
+{{lookup-form nameLookup="nameLookup"}}
+
+
+
+
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contacts'}}Click here to contact us.{{/link-to}}
