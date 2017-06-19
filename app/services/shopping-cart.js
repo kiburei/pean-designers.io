@@ -7,7 +7,8 @@ export default Ember.Service.extend({
         var items = this.get('items');
         // Check if Item already in cart
         if (items.includes(product)) {
-            console.log('ndani ndani');
+            // increment product price in cart
+            
         } else {
             items.pushObject(product);    
         }
