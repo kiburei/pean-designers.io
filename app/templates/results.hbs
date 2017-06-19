@@ -1,0 +1,12 @@
+<div class="container">
+<ul>
+  {{#each model as |product|}}
+    <li> {{product.id}} {{product.name}}</li>
+    <li> {{product.unbrandedName}} {{product.brandedName}}</li>
+    <li> {{product.currency}} {{product.priceLabel}}</li>
+  {{!--   <li> {{product.instock}} {{product.stock}}</li> --}}
+  	<li><img src="{{product.image.sizes.Best.url}}" alt=""></li>
+    {{/each}}
+
+</ul>
+</div>

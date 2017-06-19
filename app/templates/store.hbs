@@ -1,0 +1,7 @@
+<section class="products">
+  {{#each model as |product|}}
+  {{product-tile product=product}}
+  {{/each}}
+</section>
+
+{{display-cart model=model}}
