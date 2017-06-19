@@ -12,6 +12,11 @@ model: function(params) {
      // console.log(responseJSON.products);
      return responseJSON.products;
    });
+  },
+  actions: {
+    addOrder2(params) {
+      console.log(params);
+    }
   }
 });
 
